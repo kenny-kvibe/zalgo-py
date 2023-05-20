@@ -30,7 +30,7 @@ def clear(text:str) -> str:
 	"""
 	Remove the zalgo characters from a string.\n
 	---
-	:param `text`: string – text to process with `transform()`
+	:param `text`: string – text to process
 	"""
 	return re.sub(r'[\u0300-\u036f\u0489]', '', text)
 
