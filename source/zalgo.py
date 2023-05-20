@@ -32,7 +32,7 @@ def clear(text:str) -> str:
 	---
 	:param `text`: string – text to process
 	"""
-	return re.sub(r'[\u0300-\u036f\u0489]', '', text)
+	return re.sub(r'[\u0300-\u036f]', '', text)
 
 
 def print_transform(text:str, count:int = 1, strength:str = 'normal', position:str = 'random', text_concat:str = 'after') -> None:
@@ -53,5 +53,7 @@ def print_transform(text:str, count:int = 1, strength:str = 'normal', position:s
 
 
 if __name__ == '__main__':
-	print_transform('EXAMPLE', 5, 'normal', 'random', 'before')
+	print_transform('EXAMPLE', 5, 'normal', 'above')
+	print_transform('EXAMPLE', 5, 'normal', 'below')
+	print_transform('EXAMPLE', 5, 'extreme', 'random')
 	raise SystemExit(0)
