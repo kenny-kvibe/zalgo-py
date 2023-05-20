@@ -27,7 +27,7 @@ TEXT_CONCAT_OPTS = {
 	'after':  lambda ch, z: ch+z,
 	'before': lambda ch, z: z+ch,
 	'all':    lambda ch, z: z+ch+z,
-	'random': lambda ch, z: random.choice((z+ch, ch+z, z+ch+z))
+	'random': lambda ch, z: random.choice((z+ch, ch+z))
 }
 
 Z_CHARS_KEYS = tuple(Z_CHARS.keys())
