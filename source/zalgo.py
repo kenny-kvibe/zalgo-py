@@ -46,14 +46,16 @@ def print_transform(text:str, count:int = 1, strength:str = 'normal', position:s
 	:param `text_concat`: string – "before", "after", "random", "all"
 	"""
 	if count == 1:
-		print('\n'+transform(text, strength, position)+'\n')
+		print('\n '+transform(text, strength, position, text_concat)+'\n')
 	elif count > 1:
-		texts = [transform(text, strength, position) for _ in range(count)]
-		print('\n'+'  '.join(texts)+'\n')
+		texts = [transform(text, strength, position, text_concat) for _ in range(count)]
+		print('\n '+'  '.join(texts)+'\n')
 
 
 if __name__ == '__main__':
-	print_transform('EXAMPLE', 5, 'normal', 'above')
-	print_transform('EXAMPLE', 5, 'normal', 'below')
-	print_transform('EXAMPLE', 1, 'extreme', 'random')
+	print_transform('EXAMPLE', 5, 'normal', 'random', 'before')
+	print_transform('EXAMPLE', 5, 'normal', 'random', 'after')
+	print_transform('EXAMPLE', 5, 'normal', 'above', 'random')
+	print_transform('EXAMPLE', 5, 'normal', 'below', 'random')
+	print_transform('EXAMPLE', 1, 'extreme', 'random', 'random')
 	raise SystemExit(0)
