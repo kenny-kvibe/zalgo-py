@@ -55,5 +55,5 @@ def print_transform(text:str, count:int = 1, strength:str = 'normal', position:s
 if __name__ == '__main__':
 	print_transform('EXAMPLE', 5, 'normal', 'above')
 	print_transform('EXAMPLE', 5, 'normal', 'below')
-	print_transform('EXAMPLE', 5, 'extreme', 'random')
+	print_transform('EXAMPLE', 1, 'extreme', 'random')
 	raise SystemExit(0)
