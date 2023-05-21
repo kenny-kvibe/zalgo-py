@@ -18,3 +18,8 @@ print(zalgo.transform('EXAMPLE', 'normal', 'random', 'after'))
 ```
 
 ![Zalgo Example](./EXAMPLE.png)
+
+---
+
+<sub><u>UPDATED</u>: 21.May.2023</sub>
+
