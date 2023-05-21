@@ -49,7 +49,6 @@ def replace(text:str, new_chars:str) -> str:
 		if re.match(REGEX_NON_ZALGO_PATTERN, ch):
 			text_count += 1
 	if text_count != len_nchars:
-		print(len(text), len_nchars)
 		raise ValueError('Length of `text` is not equal to length of `new_chars`')
 	new_i = 0
 	new_text = ''
